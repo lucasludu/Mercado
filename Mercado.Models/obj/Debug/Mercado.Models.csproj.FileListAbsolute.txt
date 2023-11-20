@@ -1,0 +1,6 @@
+C:\Users\Usuario\source\repos\Mercado.Data\Mercado.Models\bin\Debug\Mercado.Models.dll
+C:\Users\Usuario\source\repos\Mercado.Data\Mercado.Models\bin\Debug\Mercado.Models.pdb
+C:\Users\Usuario\source\repos\Mercado.Data\Mercado.Models\obj\Debug\Mercado.Models.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Mercado.Data\Mercado.Models\obj\Debug\Mercado.Models.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Mercado.Data\Mercado.Models\obj\Debug\Mercado.Models.dll
+C:\Users\Usuario\source\repos\Mercado.Data\Mercado.Models\obj\Debug\Mercado.Models.pdb

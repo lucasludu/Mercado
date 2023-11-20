@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="94bedeebfc744596914df44035b9355b" Name="Diagram1" >
+        <EntityTypeShape EntityType="Super.Empresa" Width="1.5" PointX="2.625" PointY="3.5" />
+        <EntityTypeShape EntityType="Super.Local" Width="1.5" PointX="4.375" PointY="3.5" />
+        <EntityTypeShape EntityType="Super.Sector" Width="1.5" PointX="6.125" PointY="3.5" />
+        <EntityTypeShape EntityType="Super.Articulo" Width="1.5" PointX="7.875" PointY="3.5" />
+        <EntityTypeShape EntityType="Super.Venta" Width="1.5" PointX="9.625" PointY="3.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

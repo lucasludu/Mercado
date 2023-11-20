@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Super.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SuperStoreContainer">
+    <EntitySet Name="Empresas" EntityType="Super.Store.Empresas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Locales" EntityType="Super.Store.Locales" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sectores" EntityType="Super.Store.Sectores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Articulos" EntityType="Super.Store.Articulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ventas" EntityType="Super.Store.Ventas" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Empresas">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cuit" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locales">
+    <Key>
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdLocal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sectores">
+    <Key>
+      <PropertyRef Name="IdSector" />
+    </Key>
+    <Property Name="IdSector" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdSector" />
+    </Key>
+    <Property Name="IdArticulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdLocal" Type="int" Nullable="false" />
+    <Property Name="IdSector" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Marca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Perecedero" Type="bit" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdLocal" Type="int" Nullable="false" />
+    <Property Name="Importe" Type="decimal" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="FechaVta" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>
